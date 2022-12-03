@@ -1,77 +1,59 @@
-// Assignment code here
-
-
-// Click Generate Password - fire starting function.
-// Set/Reset all variables on start.
-// Prompt #1: length:
-// var passwordLength = X
-// Prompt #2: lowercase
-// var lowercase = (true or false)
-// Prompt #3: uppercase
-// var uppercase = (true or false)
-// Prompt #4: numerals
-// var numerals = (true or false)
-// Prompt #5: special characters
-// var numerals = (true or false)
-// function generatePassword(passwordLength, lowercase, uppercase, numerals, special)
-
-
 function generatePassword() {
   let passwordLength = parseInt(prompt("How long should your password be? (8-128)", 8));
   if (isNaN(passwordLength)) {
     return "Invalid Password Length. Please submit a number between 8-128."
   } else if (passwordLength > 128) {
-    return "Invalid Password Length"
+    return "Invalid Password Length. Please submit a number between 8-128."
   } else if (passwordLength < 8) {
-    return "Invalid Password Length"
+    return "Invalid Password Length. Please submit a number between 8-128."
   }
 
-  let lowercase = prompt("Should your password contain lowercase letters? (true or false)", true);
+  let lowercase = prompt("Should your password contain lowercase letters? (yes or no)", "yes");
 
   if (lowercase === null) {
     return "Invalid Lowercase Selection"
-  } else if (lowercase.toLowerCase() === "true") {
+  } else if (lowercase.toLowerCase() === "yes") {
     lowercase = "abcdefghijklmnopqrstuvwxyz"
-  } else if (lowercase.toLowerCase() === "false") {
+  } else if (lowercase.toLowerCase() === "no") {
     lowercase = ""
   } else {
-    return "Invalid Lowercase Selection"
+    return "Invalid Lowercase Selection. Please try again."
   }
 
-  let uppercase = prompt("Should your password contain uppercase letters? (true or false)", true);
+  let uppercase = prompt("Should your password contain uppercase letters? (yes or no)", "yes");
 
   if (uppercase === null) {
     return "Invalid Uppercase Selection"
-  } else if (uppercase.toLowerCase() === "true") {
+  } else if (uppercase.toLowerCase() === "yes") {
     uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  } else if (uppercase.toLowerCase() === "false") {
+  } else if (uppercase.toLowerCase() === "no") {
     uppercase = ""
   } else {
-    return "Invalid Uppercase Selection"
+    return "Invalid Uppercase Selection. Please try again."
   }
 
-  let numerals = prompt("Should your password contain numerals? (true or false)", true);
+  let numerals = prompt("Should your password contain numerals? (yes or no)", "yes");
 
   if (numerals === null) {
     return "Invalid Numeral Selection"
-  } else if (numerals.toLowerCase() === "true") {
+  } else if (numerals.toLowerCase() === "yes") {
     numerals = "1234567890"
-  } else if (numerals.toLowerCase() === "false") {
+  } else if (numerals.toLowerCase() === "no") {
     numerals = ""
   } else {
-    return "Invalid Numeral Selection"
+    return "Invalid Numeral Selection. Please try again."
   }
 
-  let special = prompt("Should your password contain special characters? (true or false)", true);
+  let special = prompt("Should your password contain special characters? (yes or no)", "yes");
 
   if (special === null) {
     return "Invalid Special Character Selection"
-  } else if (special.toLowerCase() === "true") {
+  } else if (special.toLowerCase() === "yes") {
     special = "!@#$%^&*()"
-  } else if (special.toLowerCase() === "false") {
+  } else if (special.toLowerCase() === "no") {
     special = ""
   } else {
-    return "Invalid Special Character Selection"
+    return "Invalid Special Character Selection. Please try again."
   }
 
 // passwordLength, lowercase, uppercase, numeral, special
@@ -85,7 +67,6 @@ function generatePassword() {
 
 
 }
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
