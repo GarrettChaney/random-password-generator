@@ -58,6 +58,9 @@ function generatePassword() {
 
 // passwordLength, lowercase, uppercase, numeral, special
   let characters = uppercase + lowercase + numerals + special
+  if  (characters.length === 0) {
+    return "Please select 'Yes' to at least one of the catagories in order to generate a password."
+  };
   let password = ""
   for (var i = 0; i < passwordLength; i++) {
     var randomNumber = Math.floor(Math.random() * characters.length)
