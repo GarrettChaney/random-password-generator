@@ -9,7 +9,7 @@ This application is designed to create a random password for the user based on p
 
 ## Installation
 
-This application is currently running at:
+This application is currently running at: https://garrettchaney.github.io/random-password-generator/
 
 ## Usage
 
@@ -30,3 +30,7 @@ When all prompts have been answered in a satisfactory manner, your random passwo
 
 ## License
 See attached license.
+
+## Mockup Image
+
+![Mockup website!](./images/password-generator-mock-up.pdf)
