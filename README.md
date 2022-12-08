@@ -33,4 +33,4 @@ See attached license.
 
 ## Mockup Image
 
-![Mockup website!](./images/password-generator-mock-up.pdf)
+![Mockup website!](./images/password-generator-mock-up.PNG)
